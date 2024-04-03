@@ -1,0 +1,19 @@
+local minDelay = 70
+local maxDelay = 120
+
+math.randomseed(42069)
+
+function OnEvent(event, arg)
+    if event == "PROFILE_ACTIVATED" then
+        -- Profile has been activated
+    end
+    if event == "PROFILE_DEACTIVATED" then
+        -- Profile has been deactivated
+    end
+    
+    while IsMouseButtonPressed(5) do
+        PressAndReleaseMouseButton(1)
+        local delay = math.random(minDelay, maxDelay)
+        Sleep(delay)
+    end
+end
